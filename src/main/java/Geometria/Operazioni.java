@@ -161,4 +161,20 @@ public class Operazioni {
         System.out.println("Il Perimetro Quadrato e' : " +risultato);
     }
     
+    public void LatoTriangoloE() {
+        
+    }
+    
+    public void AltezzaTriangoloE() {
+        
+    }
+    
+    public void AreaTriangoloE() {
+        
+    }
+    
+    public void PerimetroTriangoloE() {
+        
+    }
+    
 }

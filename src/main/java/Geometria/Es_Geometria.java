@@ -60,9 +60,29 @@ public class Es_Geometria {
         Scanner scanner = new Scanner(System.in);
         Operazioni ogg = new Operazioni();
         do {
+            System.out.println("Digitare ''Equilatero'' se si sta operando su un Triangolo Equilatero, ''Isoscele'' se si sta operando su un Triangolo Isoscele OPPURE ''Scaleno'' se si sta operando su un Triangolo Scaleno");
+            String Tipo = scanner.nextLine();
             System.out.println("Inserire una operazione da svolgere OPPURE ''Stop'' per terminare ");
-            System.out.println("Le operazioni disponibili sono: ");
+            if ("Equilatero".equals(Tipo) || "equilatero".equals(Tipo) || "Triangolo Equilatero".equals(Tipo) || "triangolo equilatero".equals(Tipo) || "Triangolo equilatero".equals(Tipo) || "triangolo Equilatero".equals(Tipo)){
+            System.out.println("Le operazioni disponibili sono: Calcolo del Perimetro, Calcolo del Lato, Calcolo dell'Area, Calcolo dell'Altezza");
             String OperazioniTriangolo = scanner.nextLine();
+            if ("Calcolo del Lato".equals(OperazioniTriangolo) || "Calcolo del lato".equals(OperazioniTriangolo) || "calcolo del lato".equals(OperazioniTriangolo) || "Calcolo Del Lato".equals(OperazioniTriangolo) || "Lato".equals(OperazioniTriangolo) || "lato".equals(OperazioniTriangolo) || "LATO".equals(OperazioniTriangolo) || "CALCOLO DEL LATO".equals(OperazioniTriangolo)) {
+                ogg.LatoTriangoloE();
+            }else if ("Calcolo dell'altezza".equals(OperazioniTriangolo) || "Calcolo dell'Altezza".equals(OperazioniTriangolo) || "calcolo dell'altezza".equals(OperazioniTriangolo) || "Calcolo Dell'Altezza".equals(OperazioniTriangolo) || "Altezza".equals(OperazioniTriangolo) || "altezza".equals(OperazioniTriangolo) || "ALTEZZA".equals(OperazioniTriangolo) || "CALCOLO DELL'ALTEZZA".equals(OperazioniTriangolo) || "calcolo dell altezza".equals(OperazioniTriangolo) || "Calcolo dell altezza".equals(OperazioniTriangolo)) {
+                ogg.AltezzaTriangoloE();
+            }else if ("Calcolo dell'Area".equals(OperazioniTriangolo) || "Calcolo dell'area".equals(OperazioniTriangolo) || "calcolo dell'area".equals(OperazioniTriangolo) || "Calcolo Dell'Area".equals(OperazioniTriangolo) || "Area".equals(OperazioniTriangolo) || "area".equals(OperazioniTriangolo)|| "calcolo dell area".equals(OperazioniTriangolo) || "AREA".equals(OperazioniTriangolo) || "CALCOLO DELL'AREA".equals(OperazioniTriangolo)) {
+                ogg.AreaTriangoloE();
+            }else if ("Calcolo del perimetro".equals(OperazioniTriangolo) || "Calcolo del Perimetro".equals(OperazioniTriangolo) || "calcolo del perimetro".equals(OperazioniTriangolo) || "Calcolo Del Perimetro".equals(OperazioniTriangolo) || "Perimetro".equals(OperazioniTriangolo) || "perimetro".equals(OperazioniTriangolo) || "PERIMETRO".equals(OperazioniTriangolo) || "CALCOLO DEL PERIMETRO".equals(OperazioniTriangolo)) {
+                ogg.PerimetroTriangoloE();
+            }
+            } else if ("Isoscele".equals(Tipo) || "isoscele".equals(Tipo) || "Triangolo Isoscele".equals(Tipo) || "triangolo isoscele".equals(Tipo) || "Triangolo isoscele".equals(Tipo) || "triangolo Isoscele".equals(Tipo)){
+                System.out.println("Le operazioni disponibili sono: ");
+                String OperazioniTriangolo = scanner.nextLine();
+            } else if ("Scaleno".equals(Tipo) || "scaleno".equals(Tipo) || "Triangolo Scaleno".equals(Tipo) || "triangolo scaleno".equals(Tipo) || "Triangolo scaleno".equals(Tipo) || "triangolo Scaleno".equals(Tipo)){
+                System.out.println("Le operazioni disponibili sono: ");
+                String OperazioniTriangolo = scanner.nextLine();
+            }
+            
         } while ("Stop".equals(OperazioniTriangolo) || "stop".equals(OperazioniTriangolo) || "STOP".equals(OperazioniTriangolo));
     }
 
