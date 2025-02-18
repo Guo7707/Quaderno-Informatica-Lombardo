@@ -11,7 +11,9 @@ import java.util.Scanner;
  * @author Lombardo Guido
  */
 public class Gestione_Code_Sviluppo {
-Scanner scanner = new Scanner(System.in);
+//Istanza della classe Scanner.
+    Scanner scanner = new Scanner(System.in);
+//Creazione attributi.
     private String Nome;
     private String Cognome;
     private int Età;
@@ -33,12 +35,15 @@ Scanner scanner = new Scanner(System.in);
     private int VisualizzaCoda;
     private int i;
 
+    //Creazione metodo di ingresso.
     public void Ingresso() {
+        //Assegnazione risposte utente agli attributi.
         System.out.println("Salve, la preghiamo di inserire i suoi dati anagrafici per potersi aggiungere alla coda");
         System.out.print("Nome: ");
         Nome = scanner.nextLine();
         System.out.print("Cognome: ");
         Cognome = scanner.nextLine();
+        //Implementazione di un ciclo do-while che applica età massima(110) ed età minima(18).
         do {
             System.out.print("Eta': ");
             Età = scanner.nextInt();
@@ -52,8 +57,11 @@ Scanner scanner = new Scanner(System.in);
         System.out.println("GRAZIE DI ESSERTI REGISTRATO!!");
     }
 
+    //Creazione metodo di indirizzamento.
     public void Indirizzamento() {
+        //Implementazione di un ciclo do-while che permette di scegliere un numero compreso tra 1 e 6.
         do {
+            //Scelta servizio.
             System.out.println("Benvenuto in Poste Italiane " + Nome + ", per quale servizio desidera mettersi in coda?");
             System.out.println("1-CORRISPONDENZA E SPEDIZIONI; 2-CONTI CARTE E FINANZIAMENTI; 2-CONTI CARTE E FINANZIAMENTI; 3-RISPARMIO E INVESTIMENTI; 4-ASSICURAZIONI E PREVIDENZA; 5-ENERGIA E TELEFONIA; 6-SERVIZI AL CITTADINO;");
             scelta = scanner.nextInt();
@@ -61,6 +69,7 @@ Scanner scanner = new Scanner(System.in);
                 System.out.println("Inserire un numero compreso tra 1 e 6");
             }
         } while (scelta < 1 || scelta > 6);
+        //Aggiunta utente nella coda selezionata.
         if (scelta == 1) {
             i1++;
             System.out.println("ORA E' IN CODA PER ACCEDERE AL SERVIZIO 'CORRISPONDENZA E SPEDIZIONI'");
@@ -95,12 +104,16 @@ Scanner scanner = new Scanner(System.in);
 
     }
 
+    //Creazione metodo di visualizzazione delle code.
     public void VisualizzaCode() {
         System.out.println("L'UTENTE E' STATO AGGIUNTO AD UNA CODA!!");
+        //Richiesta visualizzazione coda.
         System.out.println("Se si desidera visualizzare una coda, premere 1, altrimenti premere qualsiasi altro numero!");
         VisualizzaCoda = scanner.nextInt();
         if (VisualizzaCoda == 1) {
+            //Implementazione di un ciclo do-while che permette di scegliere un numero compreso tra 1 e 6.
             do {
+                //Scelta coda da visualizzare.    ...
                 System.out.println("Inserire il numero del servizio di cui si vuole visualizzare la coda!");
                 System.out.println("1-CORRISPONDENZA E SPEDIZIONI; 2-CONTI CARTE E FINANZIAMENTI; 3-RISPARMIO E INVESTIMENTI; 4-ASSICURAZIONI E PREVIDENZA; 5-ENERGIA E TELEFONIA; 6-SERVIZI AL CITTADINO;");
                 VisualizzaCoda = scanner.nextInt();
@@ -108,6 +121,7 @@ Scanner scanner = new Scanner(System.in);
                     System.out.println("Inserire un numero compreso tra 1 e 6");
                 }
             } while (VisualizzaCoda < 1 || VisualizzaCoda > 6);
+            //Stampa coda richiesta.
             if (VisualizzaCoda == 1) {
                 for (i = 0; i == i1; i++) {
                     System.out.println(Coda1[i]);
@@ -135,8 +149,9 @@ Scanner scanner = new Scanner(System.in);
             }
         }
     }
-
+    //Creazione metodo di ciclo del programma.
     public void CicloProgramma() {
+        //Richiesta di continuo o terminazione del programma.
         System.out.println("Per aggiungerne un'altro digitare un numero qualsiasi(NON 0), mentre, per uscire digitare '0'");
         cicloP = scanner.nextInt();
         scanner.nextLine();
