@@ -10,4 +10,5 @@
         <maven.compiler.release>19</maven.compiler.release>
         <exec.mainClass>com.mycompany.lombardo_quaderno_informatica.Lombardo_Quaderno_Informatica</exec.mainClass>
     </properties>
+    <name>Lombardo_Quaderno_Informatica</name>
 </project>
