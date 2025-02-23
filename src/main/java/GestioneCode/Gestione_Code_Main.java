@@ -14,8 +14,6 @@ import java.util.Scanner;
  * Questo programma gestisce la coda di PosteItaliane tramite il metodo di
  * gestione code FIFO.
  */
-
-
  /*ISTRUZIONI ALL'USO:
  * Inizialmente viene richiesto di inserire i propri dati anagrafici, 
  * successivamente scegliere il servizio a cui si è interessati, 
