@@ -17,8 +17,8 @@ import java.util.Scanner;
 
 
  /*ISTRUZIONI ALL'USO:
- * Inizialmente viene richiesto di inserire i propri dati 
- * anagrafici, successivamente scegliere il servizio a cui si è interessati, 
+ * Inizialmente viene richiesto di inserire i propri dati anagrafici, 
+ * successivamente scegliere il servizio a cui si è interessati, 
  * digitando il numero corrispondente, in modo da aggiungersi alla coda di 
  * quest'ultimo. Poi è possibile, digitando il numero 1, visualizzare una coda 
  * a scelta, oppure andare avanti, digitando un numero qualsiasi. Infine viene
@@ -28,7 +28,7 @@ import java.util.Scanner;
 public class Gestione_Code_Main {
 
     public static void main(String[] args) {
-        //Isttanza della classe Gestione_Code_Sviluppo.
+        //Istanza della classe Gestione_Code_Sviluppo.
         Gestione_Code_Sviluppo oggetto = new Gestione_Code_Sviluppo();
         //Implementazione di un ciclo do-while che termina il programma quando l'utente digita 0 alla richiesta.
         do {
@@ -36,6 +36,7 @@ public class Gestione_Code_Main {
             oggetto.Ingresso();
             oggetto.Indirizzamento();
             oggetto.VisualizzaCode();
+            oggetto.SvuotaCode();
             oggetto.CicloProgramma();
         } while (oggetto.cicloP != 0);
 
