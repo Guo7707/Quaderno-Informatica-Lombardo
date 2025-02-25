@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package GestioneCode;
+package GestioneCodeStringhe;
 
 import java.util.Scanner;
 
@@ -23,11 +23,11 @@ import java.util.Scanner;
  * richiesto se si desidera uscire premendo 0, o continuare digitando un 
  * qualsiasi numero.
  */
-public class Gestione_Code_Main {
+public class Gestione_Code_Stringhe_Main {
 
     public static void main(String[] args) {
         //Istanza della classe Gestione_Code_Sviluppo.
-        Gestione_Code_Sviluppo oggetto = new Gestione_Code_Sviluppo();
+        Gestione_Code_Stringhe_Sviluppo oggetto = new Gestione_Code_Stringhe_Sviluppo();
         //Implementazione di un ciclo do-while che termina il programma quando l'utente digita 0 alla richiesta.
         do {
             //richiamo metodi

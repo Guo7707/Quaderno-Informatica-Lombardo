@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package GestioneCode;
+package GestioneCodeStringhe;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Lombardo Guido
  */
-public class Gestione_Code_Sviluppo {
+public class Gestione_Code_Stringhe_Sviluppo {
 //Istanza della classe Scanner.
 
     Scanner scanner = new Scanner(System.in);
