@@ -3,12 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package GestioneCodeOggetti;
+
 import java.util.Scanner;
+
 /**
  *
  * @author Lombardo Guido
  */
 public class ClientiPoste {
+
     Scanner scanner = new Scanner(System.in);
     //Creazione attributi clienti.
     protected String Nome;
@@ -21,17 +24,18 @@ public class ClientiPoste {
      * (priorità minima) a 5 (priorità massima).
      */
     protected int Priorità;
-    
-    public ClientiPoste(String Nome, String Cognome, int Numerino, int Priorità){
+
+    public ClientiPoste(String Nome, String Cognome, int Numerino, int Priorità) {
         this.Nome = Nome;
         this.Cognome = Cognome;
         this.Numerino = Numerino;
         this.Priorità = Priorità;
     }
-    
-    public ClientiPoste(){
-        
+
+    public ClientiPoste() {
+
     }
+
     //Creazione metodo di ingresso.
     public void Ingresso() {
         Numerino++;
@@ -53,12 +57,18 @@ public class ClientiPoste {
         System.out.print("Luogo di nascita: ");
         LuogoDiNascita = scanner.nextLine();
         System.out.println("GRAZIE DI ESSERTI REGISTRATO!!");
-        System.out.println("Inserire il livello di importanza, da 1 a 5: ");
-        Priorità = scanner.nextInt();
+        do {
+            System.out.println("Inserire il livello di importanza, da 1 a 5: ");
+            Priorità = scanner.nextInt();
+            if (Priorità < 1 || Priorità > 5) {
+                System.out.println("Inserire un numero compreso tra 1 e 5!");
+            }
+            scanner.nextLine();
+        } while (Priorità < 1 || Priorità > 5);
     }
-    
-      public ClientiPoste StampaContenuto() {
-        System.out.println(Nome + " " + Cognome + "  -Numerino: " + Numerino + "  -Priorità: " +Priorità);
+
+    public ClientiPoste StampaContenuto() {
+        System.out.println(Nome + " " + Cognome + "  -Numerino: " + Numerino + "  -Priorita': " + Priorità);
         return this;
     }
 }

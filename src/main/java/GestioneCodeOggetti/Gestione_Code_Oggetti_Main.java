@@ -14,7 +14,7 @@ public class Gestione_Code_Oggetti_Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         //Istanza della classe Gestione_Code_Sviluppo.
+        //Istanza della classe Gestione_Code_Sviluppo.
         Gestione_Code_Oggetti_Sviluppo oggetto = new Gestione_Code_Oggetti_Sviluppo();
         //Implementazione di un ciclo do-while che termina il programma quando l'utente digita 0 alla richiesta.
         do {
@@ -27,5 +27,5 @@ public class Gestione_Code_Oggetti_Main {
         } while (oggetto.cicloP != 0);
 
     }
-    
+
 }
