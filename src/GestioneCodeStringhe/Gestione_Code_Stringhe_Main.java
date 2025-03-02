@@ -4,7 +4,6 @@
  */
 package GestioneCodeStringhe;
 
-import java.util.Scanner;
 
 /**
  *
