@@ -29,16 +29,17 @@ package GestioneCodeOggetti;
  * della coda desiderata). Infine viene richiesto se si desidera uscire premendo 
  * 0, oppure continuare digitando un qualsiasi numero.
  */
+
 public class Gestione_Code_Oggetti_Main {
 
     public static void main(String[] args) {
-        
+
         //Istanza della classe Array.
         Array oggetto = new Array();
-        
+
         //Implementazione di un ciclo do-while che termina il programma quando l'utente digita 0 alla richiesta.
         do {
-            
+
             //Richiamo metodi della classe Array.
             oggetto.Ingresso();
             oggetto.Indirizzamento();
