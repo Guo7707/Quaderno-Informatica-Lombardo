@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 public class MoltiplicatoreController {
 
     private MoltiplicatoreView View;
+    private MoltiplicatoreController Controller;
 
     public MoltiplicatoreController(MoltiplicatoreView View) {
         this.View = View;
