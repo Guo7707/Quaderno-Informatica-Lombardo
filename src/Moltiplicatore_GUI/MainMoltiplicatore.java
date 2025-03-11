@@ -8,6 +8,8 @@ package Moltiplicatore_GUI;
  *
  * @author Lombardo Guido
  */
+
+//DA CORREGGERE
 public class MainMoltiplicatore {
 
     public static void main(String[] args) {
