@@ -32,13 +32,13 @@ package GestioneRubrica;
  *  -String toString() che restituisce una descrizione testuale dell’intera rubrica.
  */
 
-// TUTTI I RETURN DEVONO ESSERE AGGIUSTATI.
+// METODI TOSTRING DEVONO ESSERE AGGIUSTATI.
 public class MainGestioneRubrica {
 
     
     public static void main(String[] args) {
-        Rubrica OggR = new Rubrica();
-        OggR.InterfacciaUtente();
+        Rubrica OggR = new Rubrica();       //Istanza della classe Rubrica.
+        OggR.InterfacciaUtente();          //Richiamo metodo di interfaccia con l'utente dalla classe Rubrica.
     }
     
 }

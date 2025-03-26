@@ -10,25 +10,33 @@ import java.util.Scanner;
  *
  * @author Lombardo Guido
  */
+
+
 public class Contatto {
 
+    //Dichiarazione attributi.
     private String Nome;
     private String Cognome;
     private String Numero;
     private int ex;
-    Scanner scanner = new Scanner(System.in);
+    
+    //Istanza classe Scanner.
+    Scanner scanner = new Scanner(System.in);      
 
+    //Costruttore principale con parametri.
     public Contatto(String Nome, String Cognome, String Numero) {
         this.Nome = Nome;
         this.Cognome = Cognome;
         this.Numero = Numero;
     }
-
+    
+    //Costruttore vuoto.
     public Contatto() {
 
     }
 
-    public void setNome() {
+    //Metodo setter della variabile Nome con input dell'utente.
+    public void setNome(String Nome) {
         do{
         try {
             ex = 0;
@@ -42,11 +50,13 @@ public class Contatto {
         }while(ex==1);
     }
 
+    //Metodo getter della variabile Nome.
     public String getNome() {
         return Nome;
     }
 
-    public void setCognome() {
+    //Metodo setter della variabile Cognome con input dell'utente.
+    public void setCognome(String Cognome) {
         do{
         try {
             ex = 0;
@@ -60,11 +70,13 @@ public class Contatto {
         }while(ex==1);
     }
 
+    //Metodo getter della variabile Cognome.
     public String getCognome() {
         return Cognome;
     }
 
-    public void setNumero() {
+    //Metodo setter della variabile Numero con input dell'utente.
+    public void setNumero(String Numero) {
         do{
         try {
             ex = 0;
@@ -78,10 +90,12 @@ public class Contatto {
         }while(ex==1);
     }
 
+    //Metodo getter della variabile Numero.
     public String getNumero() {
         return Numero;
     }
 
+    //Metodo toString che restituisce una rappresentazione testuale del contatto.
     @Override
     public String toString() {
         return this.Nome + " " + this.Cognome + " " + this.Numero;

@@ -14,27 +14,35 @@ import java.util.Scanner;
  */
 public class Rubrica {
 
+    //Dichiarazione attributi.
     int i;
     int Scelta;
     private int ex;
     private String Nome;
     private String Cognome;
     private String Numero;
+    
+    //Dichiarazione ArrayList.
     ArrayList<Contatto> arraylist = new ArrayList<Contatto>();
+    
+    //Istanza classe Scanner.
     Scanner scanner = new Scanner(System.in);
 
+    //Costruttore vuoto.
     public Rubrica() {
 
     }
 
+    //Metodo AggiungiContatto che aggiunge un contatto alla rubrica.
     public void AggiungiContatto() {
         Contatto Oggetto = new Contatto();
-        Oggetto.setNome();
-        Oggetto.setCognome();
-        Oggetto.setNumero();
+        Oggetto.setNome(Nome);
+        Oggetto.setCognome(Cognome);
+        Oggetto.setNumero(Numero);
         arraylist.add(Oggetto);
     }
 
+    //Metodo RimuoviContatto che rimuove un contatto dalla rubrica.
     public void RimuoviContatto(String Nome, String Cognome) {
         do {
             try {
@@ -48,7 +56,7 @@ public class Rubrica {
                 for (i = 0; i < arraylist.size(); i++) {
                     if (arraylist.get(i).getNome().equalsIgnoreCase(Nome) && arraylist.get(i).getCognome().equalsIgnoreCase(Cognome)) {
                         arraylist.remove(i);
-                        System.out.println("Il contatto " + Nome + " " + Cognome + " è stato eliminato!");
+                        System.out.println("Il contatto " + Nome + " " + Cognome + " e' stato eliminato!");
                         conta++;
                     }
                 }
@@ -64,9 +72,10 @@ public class Rubrica {
 
     }
 
+    //Metodo CercaContatto che che dato un nome e cognome restituisce il numero di telefono associato a quel nome e cognome.
     public String CercaContatto(String Nome, String Cognome) {
 
-                int N = 0;
+                int conta = 0;
                 System.out.print("Inserire il nome del contatto da cercare: ");
                 Nome = scanner.nextLine();
                 System.out.print("Inserire il cognome del contatto da cercare: ");
@@ -74,17 +83,18 @@ public class Rubrica {
 
                 for (i = 0; i < arraylist.size(); i++) {
                     if (arraylist.get(i).getNome().equalsIgnoreCase(Nome) && arraylist.get(i).getCognome().equalsIgnoreCase(Cognome)) {
-                        N = i;
+                        conta++;
+                        System.out.println("Il numero del contatto " + Nome + " " + Cognome + " e': " + arraylist.get(i).getNumero());
+                        
                     }
                 }
-                if (N != 0) {
-                    return arraylist.get(N).getNumero();
-                } else {
+                if (conta != 1) {
                     return "Il contatto" + Nome + " " + Cognome + " non esiste!";
                 }
-            
+                return "";
     }
 
+    //Metodo toString() che restituisce una descrizione testuale dell’intera rubrica.
     @Override
     public String toString() {
         for (i = 0; i < arraylist.size(); i++) {
@@ -93,6 +103,7 @@ public class Rubrica {
         return "Questa è la rubrica completa!";
     }
 
+    //Metodo di interfaccia con l'utente.
     public void InterfacciaUtente() {
         do {
             try {
