@@ -36,16 +36,15 @@ public class Contatto {
     }
 
     //Metodo setter della variabile Nome con input dell'utente.
-    public void setNome(String Nome) {
+    public void setNome() {
         do{
         try {
             ex = 0;
             System.out.print("Inserire il nome del contatto: ");
-            Nome = scanner.nextLine();
+            this.Nome = scanner.nextLine();
         } catch (Exception e) {
             ex++;
             System.out.println("Qualcosa e' andato storto, controllare di aver inserito i dati corretti!");
-            scanner.nextLine();
         }
         }while(ex==1);
     }
@@ -56,16 +55,15 @@ public class Contatto {
     }
 
     //Metodo setter della variabile Cognome con input dell'utente.
-    public void setCognome(String Cognome) {
+    public void setCognome() {
         do{
         try {
             ex = 0;
             System.out.print("Inserire il cognome del contatto: ");
-            Cognome = scanner.nextLine();
+            this.Cognome = scanner.nextLine();
         } catch (Exception e) {
             ex++;
             System.out.println("Qualcosa e' andato storto, controllare di aver inserito i dati corretti!");
-            scanner.nextLine();
         }
         }while(ex==1);
     }
@@ -76,16 +74,15 @@ public class Contatto {
     }
 
     //Metodo setter della variabile Numero con input dell'utente.
-    public void setNumero(String Numero) {
+    public void setNumero() {
         do{
         try {
             ex = 0;
             System.out.print("Inserire il numero del contatto: ");
-            Numero = scanner.nextLine();
+            this.Numero = scanner.nextLine();
         } catch (Exception e) {
             ex++;
             System.out.println("Qualcosa e' andato storto, controllare di aver inserito i dati corretti!");
-            scanner.nextLine();
         }
         }while(ex==1);
     }
@@ -98,6 +95,7 @@ public class Contatto {
     //Metodo toString che restituisce una rappresentazione testuale del contatto.
     @Override
     public String toString() {
+        
         return this.Nome + " " + this.Cognome + " " + this.Numero;
     }
 }

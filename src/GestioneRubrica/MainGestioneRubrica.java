@@ -32,7 +32,7 @@ package GestioneRubrica;
  *  -String toString() che restituisce una descrizione testuale dell’intera rubrica.
  */
 
-// METODI TOSTRING DEVONO ESSERE AGGIUSTATI.
+
 public class MainGestioneRubrica {
 
     
